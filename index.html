@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-  
 <html lang="ar" dir="rtl">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>دليل فعاليات مدينة دمشق - الرئيسية</title>
-  <img src="assents/images (3).jpeg" alt="Damascus_Old_City">
+    <div class="language-selector">
+  <button onclick="setLanguage('ar')">
+    <img src="assents/img/سوريا.jpeg" alt="Arabic" class= "flag-button" >
+  </button>
+  <button onclick="setLanguage('en')">
+    <img src="assents/img/أمريكا.jpeg" alt="English"  class= "flag-button" >
+  </button>
+  <title>الوضع الداكن</title>
+  <style>
+    html[theme='dark-mode'] {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
+    html[theme='dark-mode'] img {
+      filter: invert(1) hue-rotate(180deg);
+    }
+  </style>
+
+
+  <button onclick="toggleDarkMode()">تبديل الوضع</button>
+  <img src="https://via.placeholder.com/150" alt="صورة تجريبية">
+
+  <script>
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      if (html.getAttribute("theme") === "dark-mode") {
+        html.removeAttribute("theme");
+      } else {
+        html.setAttribute("theme", "dark-mode");
+      }
+      
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
@@ -28,10 +57,12 @@
 <body>
 <body class="bg-light">
   <header class="border-bottom">
+     
+  
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assents/img/اجتماع لمتابعة تحضير.png" alt="شعار الدليل" width="36" height="36" class="me-2">
+          <img src="assents/img/1.jpeg" alt="شعار الدليل" width="36" height="36" class="me-2">
           <span class="fw-bold text-primary">دليل فعاليات المدينة</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -45,6 +76,7 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
           </ul>
         </div>
+      </div>
       </div>
     </nav>
   </header>
@@ -72,7 +104,9 @@
               <img src="assents/img/مرحلة ذهبية في تاريخ.png" class="d-block w-100" alt="فعالية رياضية">
               <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-2 p-2">
                 <h5>سباق المدينة الخيري</h5>
-                <p>الجمعة 30 أكتوبر - كورنيش المدينة</p>
+                <p>الجمعة30/10/2025 
+                   المكان : ساحة الأمويين 
+                </p>
               </div>
             </div>
           </div>
@@ -96,6 +130,7 @@
           <span class="badge bg-info text-dark">معارض</span>
         </div>
       </div>
+    
     </section>
 </body>
 </html>
